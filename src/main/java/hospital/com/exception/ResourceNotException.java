@@ -1,4 +1,4 @@
-package hospital.com.Exception;
+package hospital.com.exception;
 
 
 import org.springframework.http.HttpStatus;

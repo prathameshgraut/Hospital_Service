@@ -5,7 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import Emp.com.Exception.ResourceNotFound;
+import hospital.com.exception.ResourceNotException;
 import hospital.com.Entity.Doctor;
 import hospital.com.Repo.DoctorRepo;
 import hospital.com.Service.DoctorService;
@@ -29,7 +29,7 @@ public class DoctorServiceImpl implements DoctorService {
 
 	@Override
 	public Doctor getDoctor(Integer id) {
-		return dRepo.findById(id).orElseThrow(()-> new ResourceNotFound ("Doctor","Id",id));
+		return dRepo.findById(id).orElseThrow(()-> new ResourceNotException ("Doctor","Id",id));
 	}
 
 	@Override
@@ -39,7 +39,7 @@ public class DoctorServiceImpl implements DoctorService {
 
 	@Override
 	public Doctor updateDoctor(Integer id) {
-		Doctor dc = dRepo.findById(id).orElseThrow(()->new ResourceNotFound ("Doctor","Id",id));
+		Doctor dc = dRepo.findById(id).orElseThrow(()->new ResourceNotException ("Doctor","Id",id));
 		dc.setName(dc.getName());
 		dc.setAddress(dc.getAddress());
 		dc.setEducation(dc.getEducation());
