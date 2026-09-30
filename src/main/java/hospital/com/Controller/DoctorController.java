@@ -19,6 +19,7 @@ public class DoctorController {
 		return new ResponseEntity<Doctor>(doctorService.addDoctor(Dr),HttpStatus.CREATED);
 	}
 	
+	
 	@GetMapping("/getDoctor/{id}")
 	public ResponseEntity<Doctor> getDoctor(@PathVariable Integer id){
 		return new ResponseEntity<Doctor>(doctorService.getDoctor(id),HttpStatus.OK);
