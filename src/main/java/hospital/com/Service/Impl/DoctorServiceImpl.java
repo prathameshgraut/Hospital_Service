@@ -14,7 +14,7 @@ import hospital.com.Service.DoctorService;
 public class DoctorServiceImpl implements DoctorService {
 
 	@Autowired
-	DoctorRepo dRepo; 
+	DoctorRepo    dRepo; 
 
 	
 	public DoctorServiceImpl(DoctorRepo dRepo) {
