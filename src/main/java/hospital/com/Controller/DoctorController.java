@@ -25,6 +25,9 @@ public class DoctorController {
 		return new ResponseEntity<Doctor>(doctorService.getDoctor(id),HttpStatus.OK);
 	}
 	
+	
+	//get Doctor
+	
 	@GetMapping("/getAllDoctor")
 	public List<Doctor> getAllDoctor(Doctor dr){
 		return doctorService.getAllDoctor();
